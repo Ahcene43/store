@@ -1121,52 +1121,38 @@
       display: none;
     }
 
-    .refresh-btn {
-      background: linear-gradient(135deg, #4ECDC4, #3BB4AC);
-      color: white;
-      border: none;
-      border-radius: var(--radius);
-      padding: 0.7rem 1.2rem;
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: var(--transition);
-      margin: 0.5rem;
-    }
-
-    .refresh-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow);
-    }
+    
   </style>
 </head>
 <body>
   <header id="mainHeader">
     <div class="container">
-      <div class="header-content">
-        <div class="logo">
-          <i class="fas fa-crown"></i>
-          <span id="storeNameHeader">BEN&KRAB-Shopp</span>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                <span id="storeNameHeader">BEN&KRAB-Shopp</span>
+            </div>
+            <a href="#orderForm" class="cart-summary" id="cartSummary">
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </div>
+                <span id="cartItemsCount">0 عناصر</span>
+                <span>|</span>
+                <span id="cartTotalPrice">0 دج</span>
+            </a>
         </div>
-        <a href="#orderForm" class="cart-summary" id="cartSummary">
-          <div class="cart-icon">
-            <i class="fas fa-shopping-bag"></i>
-            <span class="cart-badge" id="cartBadge">0</span>
-          </div>
-          <span id="cartItemsCount">0 عناصر</span>
-          <span>|</span>
-          <span id="cartTotalPrice">0 دج</span>
-        </a>
-      </div>
     </div>
-  </header>
+</header>
 
   <div class="container">
     <!-- زر التحديث -->
-    <div style="text-align: center; margin: 10px 0;">
-      <button onclick="refreshStoreData()" class="refresh-btn">
+    <!-- إزالة هذا القسم -->
+<div style="text-align: center; margin: 10px 0;">
+    <button onclick="refreshStoreData()" class="refresh-btn">
         <i class="fas fa-sync-alt"></i> تحديث البيانات من الخادم
-      </button>
-    </div>
+    </button>
+</div>
 
     <section class="slider-section">
       <div class="slideshow-container">
@@ -1391,9 +1377,7 @@
     </div>
   </div>
 
-  <a href="#" class="admin-float-btn" id="adminBtn">
-    <i class="fas fa-cog"></i>
-  </a>
+  
 
   <script>
     // استخدام الإعدادات من config.js
